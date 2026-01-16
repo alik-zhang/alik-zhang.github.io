@@ -1,11 +1,260 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<title>我的第一个GitHub Pages网站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alik的BLOG - 个人生活记录</title>
+    <style>
+        /* 全局样式重置与基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            color: #0088cc;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        .title {
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #2c3e50;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        /* 头部导航栏样式 */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        .blog-title {
+            font-size: 28px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .blog-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #b0c4de;
+            margin-top: 6px;
+        }
+        nav {
+            text-align: center;
+            margin-top: 16px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            font-size: 15px;
+        }
+        nav a:hover {
+            color: #87ceeb;
+        }
+
+        /* 博主信息栏 */
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #eee;
+        }
+        .author-info h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        .author-desc {
+            color: #666;
+            font-size: 14px;
+            max-width: 600px;
+        }
+
+        /* 文章列表样式 */
+        .article-list li {
+            padding: 16px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .article-list li:last-child {
+            border: none;
+        }
+        .article-title {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        .article-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            gap: 15px;
+        }
+        .article-desc {
+            color: #666;
+            font-size: 14px;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        /* 分类和归档样式 */
+        .category-list, .archive-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .category-item, .archive-item {
+            padding: 4px 12px;
+            background: #f5f5f5;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* 底部样式 */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            color: #999;
+            font-size: 13px;
+            border-top: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
-<h1>欢迎光临Alik的个人主页</h1>
-<p>网页正在建设当中，敬请期待～</p>
+    <!-- 博客头部：标题+导航 -->
+    <header>
+        <div class="container">
+            <h1 class="blog-title">Alik的BLOG</h1>
+            <p class="blog-subtitle">平凡生活，点滴记录 · 岁岁常欢愉，年年皆胜意</p>
+            <nav>
+                <a href="#home">首页</a>
+                <a href="#article">生活随笔</a>
+                <a href="#category">分类</a>
+                <a href="#archive">归档</a>
+                <a href="#about">关于我</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 博主个人信息模块 -->
+        <section class="card author" id="about">
+            <img src="https://picsum.photos/200/200" alt="Alik的头像" class="author-avatar">
+            <div class="author-info">
+                <h3>Alik</h3>
+                <p class="author-desc">热爱生活的普通人，喜欢记录日常的美好、琐碎的感悟、看过的风景和吃过的美食。这里是我的私人小天地，存放所有不被打扰的思绪与回忆。</p>
+            </div>
+        </section>
+
+        <!-- 精选文章列表模块 核心区 -->
+        <section class="card" id="article">
+            <h2 class="title">生活记录 · 随笔</h2>
+            <ul class="article-list">
+                <li>
+                    <h3 class="article-title"><a href="#">冬日的第一杯热可可，暖到心底</a></h3>
+                    <div class="article-meta">
+                        <span>发布时间：2026-01-15</span>
+                        <span>分类：日常小事</span>
+                    </div>
+                    <p class="article-desc">降温的冬日，煮一杯热可可，窝在沙发上听歌，窗外的风呼呼的吹，屋里却是满满的温暖。幸福大概就是这些细碎又温暖的瞬间吧。</p>
+                </li>
+                <li>
+                    <h3 class="article-title"><a href="#">独处的时光，是与自己和解</a></h3>
+                    <div class="article-meta">
+                        <span>发布时间：2026-01-10</span>
+                        <span>分类：生活感悟</span>
+                    </div>
+                    <p class="article-desc">慢慢学会享受独处，不再害怕一个人。独处不是孤独，而是给自己留白，和自己对话，整理思绪，然后更从容的面对生活。</p>
+                </li>
+                <li>
+                    <h3 class="article-title"><a href="#">周末探店｜街角的宝藏咖啡店</a></h3>
+                    <div class="article-meta">
+                        <span>发布时间：2026-01-05</span>
+                        <span>分类：探店分享</span>
+                    </div>
+                    <p class="article-desc">偶然发现的一家小众咖啡店，老板很温柔，拿铁的口感醇厚，搭配一块巴斯克蛋糕，度过了慢悠悠的一下午，幸福感拉满✨。</p>
+                </li>
+                <li>
+                    <h3 class="article-title"><a href="#">2026新年愿望，简单且真诚</a></h3>
+                    <div class="article-meta">
+                        <span>发布时间：2026-01-01</span>
+                        <span>分类：年度总结</span>
+                    </div>
+                    <p class="article-desc">新的一年，不求轰轰烈烈，只愿家人安康，自己能保持热爱，步履不停，认真生活，慢慢变好，足矣。</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 博客分类模块 -->
+        <section class="card" id="category">
+            <h2 class="title">文章分类</h2>
+            <div class="category-list">
+                <a href="#" class="category-item">日常小事 (5)</a>
+                <a href="#" class="category-item">生活感悟 (4)</a>
+                <a href="#" class="category-item">探店分享 (3)</a>
+                <a href="#" class="category-item">年度总结 (1)</a>
+                <a href="#" class="category-item">风景随拍 (6)</a>
+                <a href="#" class="category-item">美食记录 (7)</a>
+            </div>
+        </section>
+
+        <!-- 文章归档模块 -->
+        <section class="card" id="archive">
+            <h2 class="title">时光归档</h2>
+            <div class="archive-list">
+                <a href="#" class="archive-item">2026年1月 (4)</a>
+                <a href="#" class="archive-item">2025年12月 (6)</a>
+                <a href="#" class="archive-item">2025年11月 (5)</a>
+                <a href="#" class="archive-item">2025年10月 (3)</a>
+                <a href="#" class="archive-item">更早记录 (20+)</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 博客底部 -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Alik的BLOG · 所有生活记录，皆是独家回忆</p>
+        </div>
+    </footer>
 </body>
 </html>
