@@ -85,7 +85,7 @@
             color: #87ceeb;
         }
 
-        /* 博主信息栏 */
+        /* 博主信息栏 - 新增社交链接样式 */
         .author {
             display: flex;
             align-items: center;
@@ -107,6 +107,22 @@
             color: #666;
             font-size: 14px;
             max-width: 600px;
+            margin-bottom: 10px;
+        }
+        /* 社交链接样式 */
+        .social-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        .social-links a {
+            padding: 2px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .social-links a:hover {
+            border-bottom: 1px solid #0088cc;
+            color: #0088cc;
         }
 
         /* 文章列表样式 */
@@ -148,7 +164,7 @@
             font-size: 14px;
         }
 
-        /* 底部样式 */
+        /* 底部样式 - 优化排版+社交+邮箱 */
         footer {
             text-align: center;
             padding: 30px 0;
@@ -156,6 +172,16 @@
             color: #999;
             font-size: 13px;
             border-top: 1px solid #eee;
+            line-height: 2;
+        }
+        footer a {
+            color: #0088cc;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-social {
+            margin: 6px 0;
         }
     </style>
 </head>
@@ -176,12 +202,19 @@
     </header>
 
     <main class="container">
-        <!-- 博主个人信息模块 -->
+        <!-- 博主个人信息模块 - 核心位置新增社交链接 -->
         <section class="card author" id="about">
             <img src="https://picsum.photos/200/200" alt="Alik的头像" class="author-avatar">
             <div class="author-info">
                 <h3>Alik</h3>
                 <p class="author-desc">热爱生活的普通人，喜欢记录日常的美好、琐碎的感悟、看过的风景和吃过的美食。这里是我的私人小天地，存放所有不被打扰的思绪与回忆。</p>
+                <!-- 社交媒体链接 -->
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Alik.Zhang88/" target="_blank">Facebook</a>
+                    <a href="https://x.com/Alik_Zhang" target="_blank">Twitter(X)</a>
+                    <a href="https://www.tiktok.com/@alik.zhang" target="_blank">Tiktok</a>
+                   <a href="https://www.instagram.com/alik.zhang/" target="_blank">Instagram</a>
+                </div>
             </div>
         </section>
 
@@ -250,10 +283,12 @@
         </section>
     </main>
 
-    <!-- 博客底部 -->
+    <!-- 博客底部 - 邮箱+社交链接 完整版 -->
     <footer>
         <div class="container">
             <p>© 2026 Alik的BLOG · 所有生活记录，皆是独家回忆</p>
+            <div class="footer-social">Facebook · Twitter(X) · Tiktok · Instagram</div>
+            <p>联系我：<a href="mailto:info@alik.de5.net">info@alik.de5.net</a></p>
         </div>
     </footer>
 </body>
